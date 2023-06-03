@@ -1,0 +1,27 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+      - jdk8
+  pull_request:
+    branches:
+      - main
+      - jdk8
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: ./mvnw clean install
