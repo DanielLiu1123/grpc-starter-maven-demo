@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package demo.v1;
+
+option java_package = "com.example.v1.api";
+option java_multiple_files = true;
+
+import "validate/validate.proto";
+
+service FooService {
+  rpc GetFoo (GetFooRequest) returns (GetFooResponse) {}
+}
+
+message GetFooRequest {
+  string message = 1 [(validate.rules).string = {min_len: 1, max_len: 10}];
+}
+
+message GetFooResponse {
+  string message = 1;
+}
