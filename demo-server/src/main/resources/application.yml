@@ -1,0 +1,7 @@
+grpc:
+  server:
+    debug:
+      enabled: true
+
+  client:
+    authority: localhost:9090
