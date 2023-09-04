@@ -16,6 +16,11 @@
             <groupId>com.freemanan</groupId>
             <artifactId>grpc-boot-starter</artifactId>
         </dependency>
+        <!-- wired :), why this dependency can't be imported from grpc-boot-starter? -->
+        <dependency>
+            <groupId>com.freemanan</groupId>
+            <artifactId>grpc-client-boot-autoconfigure</artifactId>
+        </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-testing-proto</artifactId>
