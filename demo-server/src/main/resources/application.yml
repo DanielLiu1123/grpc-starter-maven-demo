@@ -1,10 +1,6 @@
-grpc:
-  server:
-    reflection:
-      enabled: true
+server:
+  port: 11230
 
-  client:
-    authority: localhost:9090
 http-exchange:
-  base-url: localhost:8080
-  use-reactor: false
+  base-packages: [ com.example.api ]
+  base-url: localhost:${server.port}

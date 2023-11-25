@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.0-SNAPSHOT</version>
+        <version>3.2.0</version>
     </parent>
 
     <groupId>com.example</groupId>
@@ -17,11 +17,7 @@
     <properties>
         <java.version>17</java.version>
         <revision>0.0.1-SNAPSHOT</revision>
-        <httpexchange-starter.version>3.2.0-SNAPSHOT</httpexchange-starter.version>
-        <grpc-starter.version>3.1.5</grpc-starter.version>
-        <grpc-version>1.59.0</grpc-version>
-        <protobuf-version>3.24.4</protobuf-version>
-        <pgv-version>1.0.2</pgv-version>
+        <httpexchange-starter.version>3.2.0-RC1</httpexchange-starter.version>
     </properties>
 
     <modules>
@@ -32,16 +28,14 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.freemanan</groupId>
-                <artifactId>grpc-starter-dependencies</artifactId>
-                <version>${grpc-starter.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
                 <groupId>com.example</groupId>
                 <artifactId>demo-api</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.danielliu1123</groupId>
+                <artifactId>httpexchange-spring-boot-starter</artifactId>
+                <version>${httpexchange-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -99,50 +93,4 @@
             </releases>
         </pluginRepository>
     </pluginRepositories>
-
-    <build>
-        <extensions>
-            <extension>
-                <groupId>kr.motd.maven</groupId>
-                <artifactId>os-maven-plugin</artifactId>
-                <version>1.7.1</version>
-            </extension>
-        </extensions>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.xolstice.maven.plugins</groupId>
-                    <artifactId>protobuf-maven-plugin</artifactId>
-                    <version>0.6.1</version>
-                    <configuration>
-                        <protocArtifact>com.google.protobuf:protoc:${protobuf-version}:exe:${os.detected.classifier}</protocArtifact>
-                        <pluginId>grpc-java</pluginId>
-                        <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc-version}:exe:${os.detected.classifier}</pluginArtifact>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>compile</goal>
-                                <goal>compile-custom</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>protoc-java-pgv</id>
-                            <goals>
-                                <goal>compile-custom</goal>
-                            </goals>
-                            <configuration>
-                                <pluginParameter>lang=java</pluginParameter>
-                                <pluginId>java-pgv</pluginId>
-                                <pluginArtifact>
-                                    build.buf.protoc-gen-validate:protoc-gen-validate:${pgv-version}:exe:${os.detected.classifier}
-                                </pluginArtifact>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
 </project>
