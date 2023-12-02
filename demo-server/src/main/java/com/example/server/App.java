@@ -2,7 +2,6 @@ package com.example.server;
 
 import com.example.api.UserApi;
 import com.example.api.UserApiBase;
-import io.github.danielliu1123.httpexchange.EnableExchangeClients;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
