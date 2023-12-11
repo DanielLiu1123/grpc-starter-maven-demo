@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.freemanan</groupId>
+            <groupId>io.github.danielliu1123</groupId>
             <artifactId>grpc-boot-starter</artifactId>
         </dependency>
         <dependency>
