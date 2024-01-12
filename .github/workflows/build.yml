@@ -4,10 +4,12 @@ on:
     branches:
       - main
       - jdk8
+      - gradle
   pull_request:
     branches:
       - main
       - jdk8
+      - gradle
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,7 +23,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'maven'
+          cache: 'gradle'
 
       - name: Build with Maven
-        run: ./mvnw clean install
+        run: ./gradlew build

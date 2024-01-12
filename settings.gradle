@@ -1,0 +1,4 @@
+rootProject.name = "grpc-starter-maven-demo"
+
+include(":demo-api")
+include(":demo-server")
