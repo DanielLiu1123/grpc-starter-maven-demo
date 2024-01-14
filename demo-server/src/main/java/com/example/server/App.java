@@ -1,7 +1,7 @@
 package com.example.server;
 
 import com.example.api.UserApi;
-import com.example.api.UserApiBase;
+import com.example.api.generated.UserApiBase;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;

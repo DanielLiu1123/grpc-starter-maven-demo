@@ -17,7 +17,7 @@
     <properties>
         <java.version>17</java.version>
         <revision>0.0.1-SNAPSHOT</revision>
-        <httpexchange-starter.version>3.2.1-RC4</httpexchange-starter.version>
+        <httpexchange-starter.version>3.2.1</httpexchange-starter.version>
     </properties>
 
     <modules>
