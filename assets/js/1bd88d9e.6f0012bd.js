@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2444],{4227:e=>{e.exports=JSON.parse('{"label":"docusaurus","permalink":"/grpc-starter-maven-demo/blog/tags/docusaurus","allTagsPath":"/grpc-starter-maven-demo/blog/tags","count":4,"unlisted":false}')}}]);
