@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>io.github.danielliu1123</groupId>
-            <artifactId>grpc-starter-validation</artifactId>
+            <artifactId>grpc-starter-protovalidate</artifactId>
         </dependency>
     </dependencies>
 

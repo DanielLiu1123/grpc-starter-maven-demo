@@ -21,6 +21,7 @@
         <grpc-version>1.62.2</grpc-version>
         <protobuf-version>3.25.1</protobuf-version>
         <pgv-version>1.0.4</pgv-version>
+        <spotless.version>2.43.0</spotless.version>
     </properties>
 
     <modules>
@@ -71,19 +72,6 @@
                                 <goal>compile-custom</goal>
                             </goals>
                         </execution>
-                        <execution>
-                            <id>protoc-java-pgv</id>
-                            <goals>
-                                <goal>compile-custom</goal>
-                            </goals>
-                            <configuration>
-                                <pluginParameter>lang=java</pluginParameter>
-                                <pluginId>java-pgv</pluginId>
-                                <pluginArtifact>
-                                    build.buf.protoc-gen-validate:protoc-gen-validate:${pgv-version}:exe:${os.detected.classifier}
-                                </pluginArtifact>
-                            </configuration>
-                        </execution>
                     </executions>
                 </plugin>
             </plugins>
@@ -113,6 +101,24 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <version>${spotless.version}</version>
+                <configuration>
+                    <java>
+                        <encoding>UTF-8</encoding>
+                        <removeUnusedImports/>
+                        <trimTrailingWhitespace/>
+                        <endWithNewline/>
+                        <palantirJavaFormat/>
+                        <excludes>
+                            <exclude>target/generated-sources/**</exclude>
+                        </excludes>
+                    </java>
+                </configuration>
             </plugin>
         </plugins>
     </build>
