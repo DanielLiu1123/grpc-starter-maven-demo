@@ -14,7 +14,7 @@ import java.util.List;
 @Slf4j
 @SpringBootApplication
 @RestController
-public class App extends UserApiBase {
+public class App implements UserApiBase {
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
@@ -26,7 +26,7 @@ public class App extends UserApiBase {
     }
 
     @Bean
-    ApplicationRunner runner(UserApi userApi) {
+    ApplicationRunner runner(UserApi userApi, UserApiBase ui) {
         return args -> log.info("{}", userApi.getById("1"));
     }
 
