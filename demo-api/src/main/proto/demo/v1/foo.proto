@@ -6,9 +6,14 @@ option java_package = "com.example.v1.api";
 option java_multiple_files = true;
 
 import "buf/validate/validate.proto";
+import "google/api/annotations.proto";
 
 service FooService {
-  rpc GetFoo (GetFooRequest) returns (GetFooResponse) {}
+  rpc GetFoo (GetFooRequest) returns (GetFooResponse) {
+    option (google.api.http) = {
+      get: "/foo/{message}"
+    };
+  }
 }
 
 message GetFooRequest {

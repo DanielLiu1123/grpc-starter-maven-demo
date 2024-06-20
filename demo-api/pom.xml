@@ -16,6 +16,10 @@
             <groupId>io.github.danielliu1123</groupId>
             <artifactId>grpc-starter-protovalidate</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

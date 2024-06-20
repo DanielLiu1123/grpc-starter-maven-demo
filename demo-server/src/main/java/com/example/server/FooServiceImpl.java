@@ -3,7 +3,7 @@ package com.example.server;
 import com.example.v1.api.FooServiceGrpc;
 import com.example.v1.api.GetFooRequest;
 import com.example.v1.api.GetFooResponse;
-import com.freemanan.starter.grpc.server.GrpcService;
+import grpcstarter.server.GrpcService;
 import io.grpc.stub.StreamObserver;
 
 /**
