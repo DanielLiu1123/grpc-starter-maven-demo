@@ -45,6 +45,7 @@
         <dependency>
             <groupId>io.github.danielliu1123</groupId>
             <artifactId>grpc-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
