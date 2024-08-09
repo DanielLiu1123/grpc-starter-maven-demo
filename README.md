@@ -1,5 +1,5 @@
 # Run the demo
 
 ```shell
-./mvnw clean -pl demo-server spring-boot:run
+./mvnw clean install -DskipTests && ./mvnw -pl demo-server spring-boot:run
 ```
