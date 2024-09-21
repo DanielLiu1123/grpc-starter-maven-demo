@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.2</version>
+        <version>3.3.4</version>
     </parent>
 
     <groupId>com.example</groupId>
@@ -17,10 +17,10 @@
     <properties>
         <java.version>17</java.version>
         <revision>0.0.1-SNAPSHOT</revision>
-        <grpc-starter.version>3.3.2</grpc-starter.version>
-        <grpc-version>1.65.1</grpc-version>
-        <protobuf-version>3.25.1</protobuf-version>
-        <pgv-version>1.0.4</pgv-version>
+        <grpc-starter.version>3.3.4</grpc-starter.version>
+        <grpc-version>1.68.0</grpc-version>
+        <protobuf-version>3.25.3</protobuf-version>
+        <pgv-version>1.1.0</pgv-version>
         <spotless.version>2.43.0</spotless.version>
     </properties>
 
