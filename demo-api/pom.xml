@@ -40,6 +40,9 @@
                             <version>${httpexchange-starter.version}</version>
                         </path>
                     </annotationProcessorPaths>
+                    <compilerArgs>
+                        <arg>-AhttpExchangeConfig=${project.basedir}/httpexchange-processor.properties</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
