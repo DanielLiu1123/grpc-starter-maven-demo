@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.3</version>
+        <version>3.5.4</version>
     </parent>
 
     <groupId>com.example</groupId>
@@ -16,7 +16,7 @@
     <name>demo</name>
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
-        <grpc-starter.version>3.5.3.3</grpc-starter.version>
+        <grpc-starter.version>3.5.4</grpc-starter.version>
         <grpc-version>1.72.0</grpc-version>
         <protobuf-version>3.25.5</protobuf-version>
         <pgv-version>1.1.0</pgv-version>
