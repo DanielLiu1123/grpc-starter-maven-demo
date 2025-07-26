@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.3</version>
+        <version>3.5.4</version>
     </parent>
 
     <groupId>com.example</groupId>
@@ -17,7 +17,7 @@
     <properties>
         <java.version>17</java.version>
         <revision>0.0.1-SNAPSHOT</revision>
-        <httpexchange-starter.version>3.5.3</httpexchange-starter.version>
+        <httpexchange-starter.version>3.5.4</httpexchange-starter.version>
     </properties>
 
     <modules>
